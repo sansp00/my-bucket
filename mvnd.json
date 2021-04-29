@@ -5,5 +5,20 @@
     "license": "Apache-2.0",
     "url": "https://github.com/mvndaemon/mvnd/releases/download/0.4.3/mvnd-0.4.3-windows-amd64.zip#/mvnd-0.4.3.zip",
     "hash": "sha256:43e5cffe5653f82fcaf63c9d2fb7cdedab63d84a87bc0b0f63fb6bd1dd4c1b5d",
-    "extract_dir": "mvnd-0.4.3-windows-amd64"
+    "extract_dir": "mvnd-0.4.3-windows-amd64",
+    "env_add_path": "bin",
+    "persist": [
+        "conf"
+    ],
+    "checkver": {
+        "github": "https://github.com/mvndaemon/mvnd",
+        "regex": "tag/([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/mvndaemon/mvnd/releases/download/$version/mvnd-$version-windows-amd64.zip#/mvnd-$version.zip",
+        "hash": {
+            "url": "$url.sha256"
+        },
+        "extract_dir": "mvnd-$version-windows-amd64"
+    }    
 }
