@@ -15,7 +15,7 @@
         "regex": "tag/([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://github.com/mvndaemon/mvnd/releases/download/$version/mvnd-$version-windows-amd64.zip",
+        "url": "https://github.com/mvndaemon/mvnd/releases/download/$version/mvnd-$version-windows-amd64.zip#/mvnd-$version.zip",
         "hash": {
             "url": "$url.sha256"
         },
